@@ -1,0 +1,39 @@
+#
+# Sesame configuration template for an OWLIM-SE repository
+#
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rep: <http://www.openrdf.org/config/repository#>.
+@prefix sr: <http://www.openrdf.org/config/repository/sail#>.
+@prefix sail: <http://www.openrdf.org/config/sail#>.
+@prefix owlim: <http://www.ontotext.com/trree/owlim#>.
+
+[] a rep:Repository ;
+    rep:repositoryID "{%Repository ID|owlim-se-test%}" ;
+    rdfs:label "{%Repository title|OWLIM-SE test repository%}" ;
+    rep:repositoryImpl [
+        rep:repositoryType "openrdf:SailRepository" ;
+        sr:sailImpl [
+            sail:sailType "owlim:Sail" ;
+            owlim:storage-folder "{%Storage folder|storage%}" ;
+            
+            owlim:owlim-license "{%License file (leave blank for evaluation)%}" ;
+       
+            owlim:ruleset "{%Rule-set|owl-horst-optimized%}" ;
+            owlim:base-URL "{%Base URL|http://example.org/owlim#%}" ;
+        	owlim:repository-type "file-repository" ;
+            owlim:imports "{%Imported RDF files(';' delimited)%}" ;
+            owlim:defaultNS "{%Default namespaces for imports(';' delimited)%}" ;
+
+            owlim:entity-index-size "{%Entity index size|200000%}" ;
+            owlim:cache-memory "{%Total cache memory|80m%}" ;
+            owlim:tuple-index-memory "{%Main index memory|80m%}" ;
+            owlim:enablePredicateList "{%Use predicate indices|false%}" ;
+            owlim:predicate-memory "{%Predicate index memory|0%}" ;
+            owlim:fts-memory "{%Full-text search memory|0%}" ;
+            owlim:ftsIndexPolicy "{%Full-text search indexing policy|never%}" ;
+            owlim:ftsLiteralsOnly "{%Full-text search literals only|true%}" ;
+            owlim:build-pcsot "{%Use PCSOT index|false%}" ;
+            owlim:build-ptsoc "{%Use PTSOC index|false%}" ;
+            owlim:in-memory-literal-properties "{%Cache literal language tags|false%}"
+        ]
+    ].

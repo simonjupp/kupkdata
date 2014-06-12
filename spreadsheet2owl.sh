@@ -1,0 +1,1 @@
+java -cp "out/production/kupdata/:lib/*:bridgedb-1.0.2/dist/org.bridgedb.bio.jar:bridgedb-1.0.2/dist/org.bridgedb.rdb.jar:bridgedb-1.0.2/dist/org.bridgedb.jar" kupkb_experiments.Run $@

@@ -1,0 +1,244 @@
+^[get_differential_analysis2]
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?geneid ?experiment ?up
+WHERE {
+?gene rdf:type <http://bio2rdf.org/ns/geneid:Gene> .
+?gene <http://bio2rdf.org/ns/uniprot:xProtein> ?uniprot .
+?gene <http://bio2rdf.org/ns/bio2rdf:symbol> ?geneid .
+?listmember <http://www.e-lico.eu/data/kupkb/hasDatabaseRef> ?gene .
+OPTIONAL {
+  ?listmember <http://www.e-lico.eu/data/kupkb/hasDatabaseRef> ?uniprot .
+}
+
+?listmember <http://www.e-lico.eu/data/kupkb/hasExpression> ?exp .
+?exp rdfs:label ?up .
+
+?compoundList <http://www.e-lico.eu/data/kupkb/hasMember> ?listmember .
+?analysis <http://www.e-lico.eu/data/kupkb/produces> ?compoundList .
+?analysis  <http://www.e-lico.eu/data/kupkb/annotatedWith> ?annotation .
+?analysis <http://www.e-lico.eu/data/kupkb/analysisOf> ?experiment
+OPTIONAL {
+?annotation <http://www.e-lico.eu/data/kupkb/hasAnnotationRole> <http://www.e-lico.eu/data/kupo/KUPO_0300009> .
+?annotation <http://www.e-lico.eu/data/kupkb/bioMaterial> ?controlBioMaterial .
+?controlBioMaterial rdfs:label ?controlanatomy .
+}
+}
+
+^[get_differential_analysis3]
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX kupkb:<http://www.e-lico.eu/data/kupkb/>
+
+SELECT DISTINCT ?genesymbol ?analyteanatomy  ?analytedisease ?expLabel  ?goterm
+
+WHERE {
+
+    ?geneid rdf:type <http://bio2rdf.org/ns/geneid:Gene> .
+    ?geneid <http://bio2rdf.org/ns/bio2rdf:symbol> ?genesymbol .
+    ?geneid <http://bio2rdf.org/ns/bio2rdf:xTaxonomy> ?taxon .
+    ?taxon rdfs:label ?species .
+     ?geneid <http://bio2rdf.org/ns/uniprot:xProtein> ?uniprot .
+      ?uniprot <http://purl.uniprot.org/core/classifiedWith> ?goid .
+           ?goid rdfs:label ?goterm .
+
+
+     { {?listmember <http://www.e-lico.eu/data/kupkb/hasDatabaseRef> ?geneid} UNION
+        {?listmember <http://www.e-lico.eu/data/kupkb/hasDatabaseRef> ?uniprot}
+     }
+
+            ?listmember <http://www.e-lico.eu/data/kupkb/hasExpression> ?expression .
+            ?expression rdfs:label ?expLabel .
+              filter (?expLabel = "Up" || ?expLabel = "Down" ) .
+
+            ?compoundList <http://www.e-lico.eu/data/kupkb/hasMember> ?listmember .
+            ?compoundList rdf:type ?experimentType .
+            ?experimentType rdfs:label ?experimentTypeLabel .
+            filter (?experimentType = kupkb:KUPKB_1000029 || ?experimentType = kupkb:KUPKB_1000027 ||
+            ?experimentType = kupkb:KUPKB_1000073 || ?experimentType = kupkb:KUPKB_1000030 || ?experimentType = kupkb:KUPKB_1000028 || ?experimentType = kupkb:KUPKB_1000077) .
+
+            ?analysis <http://www.e-lico.eu/data/kupkb/produces> ?compoundList .
+            ?analysis  <http://www.e-lico.eu/data/kupkb/annotatedWith> ?annotation .
+            ?analysis <http://www.e-lico.eu/data/kupkb/analysisOf>  ?experiment  .
+            ?experiment rdfs:comment  ?expDesc  .
+            ?experiment rdfs:label  ?experimentDisplayName  .
+            OPTIONAL { ?experiment <http://www.e-lico.eu/data/kupkb/experiment/pmid> ?pmid . }
+            OPTIONAL { ?experiment rdfs:seeAlso ?seeAlsoLink . }
+
+            ?annotation <http://www.e-lico.eu/data/kupkb/hasAnnotationRole> <http://www.e-lico.eu/data/kupo/KUPO_0300008> .
+            ?annotation <http://www.e-lico.eu/data/kupkb/bioMaterial> ?analyteBioMaterial .
+            ?analyteBioMaterial rdfs:label ?analyteanatomy .
+
+             OPTIONAL { ?annotation <http://www.e-lico.eu/data/kupkb/hasDisease> ?analyteDiseaseURI .
+                                   ?analyteDiseaseURI rdfs:label ?analytedisease }
+}
+
+
+
+^[get_differential_analysis4]
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX kupkb:<http://www.e-lico.eu/data/kupkb/>
+
+SELECT DISTINCT ?genesymbol ?analyteanatomy  ?analytedisease ?expLabel  ?goterm
+
+WHERE {
+
+    ?geneid rdf:type <http://bio2rdf.org/ns/geneid:Gene> .
+    ?geneid <http://bio2rdf.org/ns/bio2rdf:symbol> ?genesymbol .
+    ?geneid <http://bio2rdf.org/ns/bio2rdf:xTaxonomy> ?taxon .
+    ?taxon rdfs:label ?species .
+     ?geneid <http://bio2rdf.org/ns/uniprot:xProtein> ?uniprot .
+      ?uniprot <http://purl.uniprot.org/core/classifiedWith> ?goid .
+           ?goid rdfs:label ?goterm .
+           ?goid rdfs:subClassOf <http://purl.org/obo/owl/GO#GO_0008150> .
+
+
+     { {?listmember <http://www.e-lico.eu/data/kupkb/hasDatabaseRef> ?geneid} UNION
+        {?listmember <http://www.e-lico.eu/data/kupkb/hasDatabaseRef> ?uniprot}
+     }
+
+            ?listmember <http://www.e-lico.eu/data/kupkb/hasExpression> ?expression .
+            ?expression rdfs:label ?expLabel .
+              filter (?expLabel = "Up") .
+
+            ?compoundList <http://www.e-lico.eu/data/kupkb/hasMember> ?listmember .
+            ?compoundList rdf:type ?experimentType .
+            ?experimentType rdfs:label ?experimentTypeLabel .
+            filter (?experimentType = kupkb:KUPKB_1000029 || ?experimentType = kupkb:KUPKB_1000027 ||
+            ?experimentType = kupkb:KUPKB_1000073 || ?experimentType = kupkb:KUPKB_1000030 || ?experimentType = kupkb:KUPKB_1000028 || ?experimentType = kupkb:KUPKB_1000077) .
+
+            ?analysis <http://www.e-lico.eu/data/kupkb/produces> ?compoundList .
+            ?analysis  <http://www.e-lico.eu/data/kupkb/annotatedWith> ?annotation .
+            ?analysis <http://www.e-lico.eu/data/kupkb/analysisOf>  ?experiment  .
+            ?experiment rdfs:comment  ?expDesc  .
+            ?experiment rdfs:label  ?experimentDisplayName  .
+
+            ?annotation <http://www.e-lico.eu/data/kupkb/hasAnnotationRole> <http://www.e-lico.eu/data/kupo/KUPO_0300008> .
+            ?annotation <http://www.e-lico.eu/data/kupkb/bioMaterial> ?analyteBioMaterial .
+            ?analyteBioMaterial rdfs:label ?analyteanatomy .
+
+             ?annotation <http://www.e-lico.eu/data/kupkb/hasDisease> ?analyteDiseaseURI .
+             ?analyteDiseaseURI rdfs:label ?analytedisease
+}
+
+^[get_mirna2gene_differential_analysis]
+SELECT DISTINCT ?geneid ?genesymbol ?mirnasymbol ?experiment ?experimentDisplayName ?experimentTypeLabel  ?annotation ?species ?analyteBioMaterial ?analyteanatomy ?analyteDiseaseURI ?analytedisease ?expLabel ?expDesc ?pmid ?seeAlsoLink
+
+WHERE {
+
+    ?geneid rdf:type <http://bio2rdf.org/ns/geneid:Gene> .
+    ?mirna kupkb:geneidTarget ?geneid .
+
+    ?mirna <http://bio2rdf.org/ns/bio2rdf:symbol> ?mirnasymbol .
+    ?geneid rdfs:label ?genesymbol .
+
+
+    {
+     {?listmember kupkb:hasDatabaseRef ?geneid}
+        UNION
+        { ?geneid <http://bio2rdf.org/ns/uniprot:xProtein> ?uniprot .
+            ?genelistlistmember kupkb:hasDatabaseRef ?uniprot} UNION
+            {?listmember kupkb:hasDatabaseRef ?mirna}
+    }
+
+            ?listmember kupkb:hasExpression ?expression .
+            ?expression rdfs:label ?expLabel .
+
+            filter (?expLabel = "Up" || ?expLabel = "Down" ) .
+
+            ?compoundList kupkb:hasMember ?listmember .
+            ?compoundList rdf:type ?experimentType .
+            ?experimentType rdfs:label ?experimentTypeLabel .
+            filter (?experimentType = kupkb:KUPKB_1000029 || ?experimentType = kupkb:KUPKB_1000027 ||
+            ?experimentType = kupkb:KUPKB_1000073 || ?experimentType = kupkb:KUPKB_1000030 || ?experimentType = kupkb:KUPKB_1000028 || ?experimentType = kupkb:KUPKB_1000077) .
+
+            ?analysis kupkb:produces ?compoundList .
+            ?analysis kupkb:annotatedWith ?annotation .
+            ?analysis kupkb:analysisOf  ?experiment  .
+            ?experiment rdfs:comment  ?expDesc  .
+            ?experiment rdfs:label  ?experimentDisplayName  .
+            OPTIONAL { ?experiment <http://www.e-lico.eu/data/kupkb/experiment/pmid> ?pmid . }
+            OPTIONAL { ?experiment rdfs:seeAlso ?seeAlsoLink . }
+
+            ?annotation kupkb:hasAnnotationRole kupo:KUPO_0300008 .
+            ?annotation kupkb:bioMaterial ?analyteBioMaterial .
+            ?analyteBioMaterial rdfs:label ?analyteanatomy .
+
+             OPTIONAL { ?annotation kupkb:hasDisease ?analyteDiseaseURI .
+                                   ?analyteDiseaseURI rdfs:label ?analytedisease }
+            }
+
+
+^[generate_results_table]
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX kupkb:<http://www.e-lico.eu/data/kupkb/>
+PREFIX kupo:<http://www.e-lico.eu/data/kupo/>
+
+SELECT DISTINCT ?geneid ?genesymbol ?experiment ?experimentDisplayName ?experimentTypeLabel  ?annotation ?species ?analyteBioMaterial ?analyteanatomy ?analyteDiseaseURI ?analytedisease ?expLabel ?expDesc ?pmid ?seeAlsoLink
+WHERE {
+
+{
+  {?geneid rdf:type <http://bio2rdf.org/ns/geneid:Gene>}
+  UNION
+  {?geneid rdf:type kupkb:KUPKB_1000056}
+   UNION
+  {?geneid rdf:type <http://bio2rdf.org/ns/hmdb:Compound>}
+} .
+{
+  {?geneid <http://bio2rdf.org/ns/bio2rdf:symbol> ?genesymbol}
+  UNION
+  {?geneid rdfs:label ?genesymbol}
+}
+
+?geneid <http://bio2rdf.org/ns/bio2rdf:xTaxonomy> ?taxon .
+?taxon rdfs:label ?species .
+
+{
+  {?listmember kupkb:hasDatabaseRef ?geneid}
+  UNION
+  { ?geneid <http://bio2rdf.org/ns/uniprot:xProtein> ?uniprot .
+    ?listmember kupkb:hasDatabaseRef ?uniprot
+  }
+}
+
+?listmember kupkb:hasExpression ?expression .
+?expression rdfs:label ?expLabel .
+?compoundList kupkb:hasMember ?listmember .
+?compoundList rdf:type ?experimentType .
+?experimentType rdfs:label ?experimentTypeLabel .
+filter (?experimentType = kupkb:KUPKB_1000029 || ?experimentType = kupkb:KUPKB_1000027 ||
+        ?experimentType = kupkb:KUPKB_1000073 || ?experimentType = kupkb:KUPKB_1000030 || ?experimentType = kupkb:KUPKB_1000028 || ?experimentType = kupkb:KUPKB_1000077) .
+?analysis kupkb:produces ?compoundList .
+?analysis kupkb:annotatedWith ?annotation .
+?analysis kupkb:analysisOf  ?experiment  .
+?experiment rdfs:comment  ?expDesc  .
+?experiment rdfs:label  ?experimentDisplayName  .
+
+OPTIONAL { ?experiment <http://www.e-lico.eu/data/kupkb/experiment/pmid> ?pmid . }
+OPTIONAL { ?experiment rdfs:seeAlso ?seeAlsoLink . }
+
+?annotation kupkb:hasAnnotationRole kupo:KUPO_0300008 .
+?annotation kupkb:bioMaterial ?analyteBioMaterial .
+?analyteBioMaterial rdfs:label ?analyteanatomy .
+
+OPTIONAL { ?annotation kupkb:hasDisease ?analyteDiseaseURI .
+           ?analyteDiseaseURI rdfs:label ?analytedisease }
+
+}
+
+^[get_geneid_from_uniprot]
+SELECT ?geneid
+WHERE {
+?geneid  <http://bio2rdf.org/ns/uniprot:xProtein> ?uniprot
+}
+
+
+^[get_miranda_from_mirna]
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?miranda
+WHERE {
+?miranda  rdfs:label ?mirna
+}
