@@ -18,12 +18,17 @@
 /Users/jupp/dev/ontology_dev/kupkb/ontologies/kupo/imports/cto.owl
 /Users/jupp/dev/ontology_dev/kupkb/ontologies/kupkb/kupkb-inferred.owl
 
+/Users/jupp/dev/ontology_dev/kupkb/ontologies/cvdkb/uberon.owl
+/Users/jupp/dev/ontology_dev/kupkb/ontologies/cvdkb/doid.owl
+
+
+
 # entrez gene
 /Users/simon/dev/kupo/kupdb/kupkb-build/rdf/xaa_gene.n3
 /Users/simon/dev/kupo/kupdb/kupkb-build/rdf/xab_gene.n3
 /Users/simon/dev/kupo/kupdb/kupkb-build/rdf/xac_gene.n3
 /Users/simon/dev/kupo/kupdb/kupkb-build/rdf/xad_gene.n3
-/Users/jupp/dev/kupdata/kupkb-build/rdf/dog_gene_info.n3
+#/Users/jupp/dev/kupdata/kupkb-build/rdf/dog_gene_info.n3
 
 # uniprot
 /Users/jupp/dev/kupdata/kupkb-build/rdf/xaa_uniprot.n3
@@ -33,360 +38,29 @@
 /Users/jupp/dev/kupdata/kupkb-build/rdf/xae_uniprot.n3
 
 # interact
-/Users/jupp/dev/kupdata/kupkb-build/rdf/string.n3
+#/Users/jupp/dev/kupdata/kupkb-build/rdf/string.n3
 
 
 #hmdb
-/Users/jupp/dev/kupdata/kupkb-build/rdf/hmdb2rdf_clean.n3
+#/Users/jupp/dev/kupdata/kupkb-build/rdf/hmdb2rdf_clean.n3
 
 #miRNA
-/Users/jupp/dev/kupdata/kupkb-build/rdf/xaa_mirna.n3
-/Users/jupp/dev/kupdata/kupkb-build/rdf/xab_mirna.n3
-/Users/jupp/dev/kupdata/kupkb-build/rdf/xac_mirna.n3
-/Users/jupp/dev/kupdata/kupkb-build/rdf/xad_mirna.n3
-/Users/jupp/dev/kupdata/kupkb-build/rdf/xae_mirna.n3
-/Users/jupp/dev/kupdata/kupkb-build/rdf/xaf_mirna.n3
-/Users/jupp/dev/kupdata/kupkb-build/rdf/xag_mirna.n3
-/Users/jupp/dev/kupdata/kupkb-build/rdf/xah_mirna.n3
-/Users/jupp/dev/kupdata/kupkb-build/rdf/xai_mirna.n3
-/Users/jupp/dev/kupdata/kupkb-build/rdf/xaj_mirna.n3
-/Users/jupp/dev/kupdata/kupkb-build/rdf/xak_mirna.n3
-/Users/jupp/dev/kupdata/kupkb-build/rdf/xal_mirna.n3
-/Users/jupp/dev/kupdata/kupkb-build/rdf/xam_mirna.n3
-/Users/jupp/dev/kupdata/kupkb-build/rdf/xan_mirna.n3
 
 # orthologs
-/Users/jupp/dev/kupdata/background_data/homologene/human_mouse_homologs.n3
-/Users/jupp/dev/kupdata/background_data/homologene/mouse_rat_homologs.n3
+#/Users/jupp/dev/kupdata/background_data/homologene/human_mouse_homologs.n3
+#/Users/jupp/dev/kupdata/background_data/homologene/mouse_rat_homologs.n3
 
 # GO
-/Users/jupp/Documents/e-lico/svn/trunk/Public/kupo/imports/go_bp.owl
-/Users/jupp/Documents/e-lico/svn/trunk/Public/kupo/imports/go_mf.owl
-/Users/jupp/Documents/e-lico/svn/trunk/Public/kupo/imports/go_cc.owl
-
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Boudonck_nephrotox_tissu_cispla_1.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Boudonck_nephrotox_tissu_cispla_28.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Boudonck_nephrotox_tissu_cispla_5.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Boudonck_nephrotox_tissu_genta_1.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Boudonck_nephrotox_tissu_genta_28.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Boudonck_nephrotox_tissu_genta_5.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Boudonck_nephrotox_tissu_tobra_1.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Boudonck_nephrotox_tissu_tobra_28.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Boudonck_nephrotox_tissu_tobra_5.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Boudonck_nephrotox_urine_cispla_1.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Boudonck_nephrotox_urine_cispla_28.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Boudonck_nephrotox_urine_cispla_5.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Boudonck_nephrotox_urine_genta_1.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Boudonck_nephrotox_urine_genta_28.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Boudonck_nephrotox_urine_genta_5.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Boudonck_nephrotox_urine_tobra_1.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Boudonck_nephrotox_urine_tobra_28.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Boudonck_nephrotox_urine_tobra_5.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE1009.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE11161.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE11221_detrusor.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE11221_urothelium.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE12792.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE13368_14d.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE13368_56d.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE13368_7d.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE13672_ratMTAL.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE13672_ratProxTub.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE1563_AcuteRejection.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE1563_NormalTransplant.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE17138_adult.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE17138_neonatal.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE17141.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE17142.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE19640.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE20004.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE20687.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE20844.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE21324.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE22464.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE22561.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE4816.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE6466_adult.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE6466_neonatal.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE6963.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/GSE7887.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/HKUPP_humanGlomerulus_DB_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/HKUPP_humanUrinaryExosome_DB_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/HKUPP_rodentIMCD_DB_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Huttlin_Cell_Nonphospho2010.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Huttlin_Cell_Phospho2010.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Rinschen_Knepper_MouseCollectingDuctVasopressinePhosphoprot.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Rudniki-human-dist-tubule-Protein-IHC.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Rudniki-human-dist-tubule-normal-Protein-IHC.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Rudniki-human-glomerulus-normal-Protein-IHC.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Rudniki-human-prox-tubule-Protein-IHC.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Rudniki-human-prox-tubule-mRNA.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Rudniki-human-prox-tubule-normal-Protein-IHC.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Toyahara_APKD_rat_metabo.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/Toyohara_CKD_human_metabolomic.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/akiyoshi_hirayama.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/banon_campistol_humanUrineIFTA_listgeneid.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/barati_klein_diabeticMouseGlomerulus_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/chen_chen_ProxTubTgfPhosphoprot.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/chen_li.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/chen_li_ADPKD1.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/chen_li_ADPKD2.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/chen_li_ADPKD3.5.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/chen_li_ADPKD3.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/chen_zhou_calciumOxalatePTEC_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/christos_agyropoulos_DN.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/christos_agyropoulos_PMA.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/cina_margetts_ProxTubTGF.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/cina_margetts_thy11GlomPCR1week.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/cina_margetts_thy11GlomPCR3week.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/cina_margetts_thy11GlomPCR8week.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/cina_margetts_thy11TubIHC3week.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/cina_margetts_thy11TubPCR1week.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/cina_margetts_thy11TubPCR3week.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/cina_margetts_thy11TubPCR8week.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/cina_margetts_thy11TubWB1week.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/cina_margetts_thy11TubWB3week.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/cina_margetts_thy11TubWB8week.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/collectingDuct_phosphoproteinDB_experiment1.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/collectingDuct_phosphoproteinDB_experiment2.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/collectingDuct_phosphoproteinDB_experiment3.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/collectingDuct_phosphoproteinDB_experiment4.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/cuellar_yamamoto_HumanNormalmRNAHGL.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/cuellar_yamamoto_HumanNormalmRNAIshGlom.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/cuellar_yamamoto_HumanNormalmRNAIshInterst.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/cuellar_yamamoto_HumanNormalmRNAIshParietal.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/cuellar_yamamoto_HumanNormalmRNAIshPodo.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/cuellar_yamamoto_HumanNormalmRNAIshTub.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/cuellar_yamamoto_HumanNormalmRNAPCRCortex.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/cuellar_yamamoto_HumanNormalmRNAPCRGlom.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/cuellar_yamamoto_HumanNormalmRNAPCRMedulla.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/cutillas_unwin_urineFanconi_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/denise_sadlier_14.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/denise_sadlier_28.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/denise_sadlier_3.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/denise_sadlier_7.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/doucet_cheval_CCD_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/doucet_cheval_CTAL_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/doucet_cheval_MTAL_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/doucet_cheval_OMCD_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/doucet_cheval_connecttub_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/doucet_cheval_distconvtub_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/doucet_cheval_glom_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/doucet_cheval_proxstraighttub_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/doucet_cheval_proxtubS1_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/doucet_cheval_proxtubS2_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/doucet_garonne_CCD_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/doucet_garonne_CTAL_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/doucet_garonne_MTAL_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/doucet_garonne_OMCD_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/doucet_garonne_PCT_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/doucet_garonne_distconvtub_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/doucet_garonne_glom_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/doucet_garonne_proxstraighttub_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/du_qu_miRNAGlucosePTEC_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/ekaterina_nevedomskaya.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/emmanuelle_com_RNA.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/emmanuelle_com_prot.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/eoin_brennan.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/eugene_rhee.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/euregene.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/famulski_halloran_mouseAcuteRejectionHighIFN.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/famulski_halloran_mouseAcuteRejectionLowIFN.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/felekkis_deltas.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/felekkis_deltasProt.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/fu_yi_miRDiabeticRat.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/fu_yi_miRDiabeticRatPCR.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/fu_yi_miRMesangialGlucose.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/fugmann_roesli_12w.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/fugmann_roesli_4w.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/gang_wang_iga.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/godwin_iacomini_miRNAKidneyIschRep.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/han_chen_mousePKDProt.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/harsh_dweep_m.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/harsh_dweep_mi.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/hills_brunskill_ProxTubTGFmRNA.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/hogan_ward_protHumanExosome.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/iddo_ben-dov.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/imcd_membraneProteinDB.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/imcd_transcriptomeDB.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/janani_saikumar_120cort.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/janani_saikumar_120med.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/janani_saikumar_72cort.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/janani_saikumar_72med.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/janani_saikumar_gen_kc.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/janani_saikumar_gen_u.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/janani_saikumar_u.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/jie_zhang.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/jin_jonghwa_2DE.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/jin_jonghwa_itraq.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/jinchun_sun.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/julien_ratelade.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/kae_teramoto.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/kang_chang_fibroTgfProteo.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/kang_cheng_array.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/kang_cheng_hpc.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/kang_cheng_qpcr.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/khositseth_yu_CollectingDuctVasopressinProtein.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/khositseth_yu_CollectingDuctVasopressinRNA.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/koupepidou_deltas_ratKidneyPKDday0.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/koupepidou_deltas_ratKidneyPKDday24.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/koupepidou_deltas_ratKidneyPKDday6.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/kriegel_liang_ProxTubTGFProt.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/kriegel_liang_ProxTubTGFmiRNA.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/krzysztof_wanic_24hrs.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/krzysztof_wanic_6hrs.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/kugita_nagao_D3ratKidneyPKD.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/kugita_nagao_D7ratKidneyPKD.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/kumiko_nishihara_kid.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/kumiko_nishihara_prox10.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/kumiko_nishihara_prox2.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/kurt_boudonck_cis28k.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/kurt_boudonck_cis28u.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/kurt_boudonck_cis5u.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/kurt_boudonck_gen28k.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/kurt_boudonck_gen28u.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/kurt_boudonck_gen5k.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/kurt_boudonck_gen5u.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/kypereou_charonis_ratKidneyUUO_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/kypreou_charonis_ratKidneyUUO_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/lai_witzmann_ADPKDCystFLuidProt.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/long_danesh_bis_WBGlucosePodocyte.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/long_danesh_bis_miRNAGlomerulusDiabetic.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/long_danesh_bis_miRNAGlomerulusDiabeticqPCR.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/long_danesh_bis_miRNAGlucoseEndothelial.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/long_danesh_bis_miRNAGlucoseEndothelialqPCR.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/long_danesh_bis_miRNAGlucosePodocyte.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/long_danesh_bis_miRNAGlucosePodocyteqPCR.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/long_danesh_miRNAGlomerulusDiabetic_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/long_danesh_miRNAGlucoseEndothelial_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/long_danesh_miRNAGlucosePodocyte_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/mTALPhosphoproteomeDataset.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/magda_bakun.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/makino_suga_glomDiabetMouse5w.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/makino_suga_glomDiabetMouse7w.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/mann_normalHumanUrine_listgeneid.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/mason_witzmann_ADPKDCystFLuidProt.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/matsumoto_kopp_normalPodocyte_listgeneid.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/matthias_neusser.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/max_sieber.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/max_sieber_metabo.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/mengjie_li_ser10wk.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/mengjie_li_ser12wk.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/mengjie_li_ser8wk.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/mengjie_li_urine12wk.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/mengjie_li_urine16wk.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/mesrobian_wakim_UUOHumanUrine1to6.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/mesrobian_wakim_UUOHumanUrine7to12.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/mickael_simonson.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/miyamoto_yamamoto_glomerulus_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/nakorchevsky_salomon_humanKidneyIFTA_listgeneid.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/nan_wang_ds.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/nan_wang_fsgs.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/nan_wang_ss.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/ng_d_p_gc.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/ng_d_p_lc.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/oconnell_macmorrow_msurine.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/oconnell_macmorrow_wbtissue.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/oconnell_macmorrow_wburine.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/peter_trnka_exo.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/peter_trnka_wu.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/pradervand_firsov_MouseCCDmRNA.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/pradervand_firsov_MouseDCTmRNA.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/priyanka_pandey.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/priyanka_pandey_mRNA.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/puigmule_meseguer_CsAPTEC_human_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/puigmule_meseguer_CsAPTEC_mouse_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/ramachandra_sharma.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/ramalingam_bethunaickan.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/rekha_jagadapillai.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/renalcortex_membranePhosphoProteinDB.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/reuter_gabriels_ratKidneyIFTA_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/rodder_marti_HumanIFTADistTub.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/rodder_marti_HumanIFTADistTubIHC.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/rodder_marti_HumanIFTAGlom.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/rodder_marti_HumanIFTAGlomIHC.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/rodder_marti_HumanIFTAInterst.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/rodder_marti_HumanIFTAInterstIHC.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/rodder_marti_HumanIFTAKidney.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/rodder_marti_HumanIFTAProxTub.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/rodder_marti_HumanIFTAProxTubIHC.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/rooney_crean_humanKidneyDiabet.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/rudnicki_mayer_ProteinuriaGlomVEGF.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/rudnicki_mayer_ProteinuriaProgressiveGlomVEGF.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/rudnicki_mayer_ProteinuriaProgressiveProxTubVEGF.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/rudnicki_mayer_ProteinuriaProxTubRNA.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/rudnicki_mayer_ProteinuriaProxTubVEGF.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/rudnicki_mayer_ProteinuriaStableGlomVEGF.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/rudnicki_mayer_ProteinuriaStableProxTubVEGF.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/s_tryggvason.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/sadlier_johnson_D14.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/sadlier_johnson_D2.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/sadlier_johnson_D5.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/sadlier_johnson_D5qPCR.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/sadlier_johnson_D7.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/sadlier_johnson_mesangialPDGF.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/saintmezard_marti_AcuteRejectionHumanmRNA.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/sasaki_makino.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/schanstra_bachvarov.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/scherer_haller_IFTAHumanKidney.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/schordan_maurer_highGlucosePodocyte_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/scian_mas_tissue.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/scian_mas_urine.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/semangoen_thongboonkerd_protCaOxDistTubCell.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/shakib_godovac.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/shi_he_sun.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/shinya_nakatani.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/sigdel_sarwal_humanUrineAcuteRejection_listgeneid.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/singhto_thonboonkerd_calciumOxalateMonocyte.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/so_kim_highGlucosePTEC_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/song_pei_ADPKDKidney.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/sui_huang_miRNAHumanAcuteRejection.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/sunil_kurian_mild.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/sunil_kurian_severe.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/susuki_sasahara_kidneyDiabMouse.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/taylor-pkd-mouse-metabo_26days.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/taylor-pkd-mouse-metabo_45days.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/thongboonkerd_chen_protCaOxDistTubCell.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/tie_zhao.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/vallabh_shah.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/van_der_kloet.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/vlahou_normalHumanUrine_2DE_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/vlahou_normalHumanUrine_geLC_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/vonToern_nelson_IFTA_14d.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/vonToern_nelson_IFTA_7d.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/vonToerne_nelson_IFTA_56d.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/wang_gang_dgs.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/wang_gang_fgs.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/wang_gang_mgn.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/wang_gang_mirna.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/wang_szeto_mirnahumankidneyiga_list-jupp.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/weber_wang_miRNAnormalHumanUrine_list.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/wetzel_aigner_bmp7collectingduct.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/wetzel_aigner_bmp7connectingtub.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/wetzel_aigner_bmp7disttub.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/wetzel_aigner_bmp7glom.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/wetzel_aigner_bmp7proxtub.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/xianfu_gao.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/xu_fogo_proteoEndoth.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/xu_fogo_proteoGlom.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/xu_fogo_proteoMesangial.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/xu_fogo_proteoPodocyte.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/yang_lu.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/ying_sun.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/ying_yong_zhao_ckd.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/ying_yong_zhao_ckd2.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/yoo_park_PKDKidneyProteinMouse.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/zenyui_cui.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/zhang_guan_glomerulusdbdbIHC.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/zhang_guan_glomerulusdbdbqPCR.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/zhang_guan_kidneydbdb.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/zhang_guan_kidneydbdbqPCR.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/zhang_guan_tubdbdbqPCR.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/zhao_lin_tissue.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/zhao_lin_urine.owl
-
+#/Users/jupp/Documents/e-lico/svn/trunk/Public/kupo/imports/go_bp.owl
+#/Users/jupp/Documents/e-lico/svn/trunk/Public/kupo/imports/go_mf.owl
+#/Users/jupp/Documents/e-lico/svn/trunk/Public/kupo/imports/go_cc.owl
 
 
 #/Users/jupp/Google Drive/JuppKlein/KUP/experiment_ontologies/euregene.owl
-/Users/jupp/Google Drive/JuppKlein/KUP/experiment_descriptions.owl
+/Users/jupp/Google Drive/JuppKlein/CVDKB/experiment_descriptions.owl
 
+
+/Users/jupp/Google Drive/JuppKlein/CVDKB/rdf/Sinnaeve_PlosOne_2009.owl
+/Users/jupp/Google Drive/JuppKlein/CVDKB/rdf/Wingrove_Circulation_2008_Discovery_PCR.owl
+/Users/jupp/Google Drive/JuppKlein/CVDKB/rdf/Wingrove_Circulation_2008_Discovery_Array.owl
+/Users/jupp/Google Drive/JuppKlein/CVDKB/rdf/Wingrove_Circulation_2008_Validation_PCR.owl

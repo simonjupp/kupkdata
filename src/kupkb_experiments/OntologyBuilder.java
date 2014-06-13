@@ -319,7 +319,8 @@ public class OntologyBuilder {
                 // describe annotation
                 for (String bioMaterial : annotation.getBioMaterial()) {
                     System.out.println("looking up: " + bioMaterial);
-                    OWLClass entity = getOWLClassFromString(bioMaterial);
+                    OWLClass entity = factory.getOWLClass(IRI.create(bioMaterial));
+//                    OWLClass entity = getOWLClassFromString(bioMaterial);
 
 
                     if (entity != null) {
@@ -356,7 +357,8 @@ public class OntologyBuilder {
                 }
 
                 for (String disease : annotation.getHasDisease()) {
-                    OWLClass entity = getOWLClassFromString(disease);
+                    OWLClass entity = factory.getOWLClass(IRI.create(disease));
+//                    OWLClass entity = getOWLClassFromString(disease);
                     if (entity != null) {
                         OWLAxiom tmpAx = factory.getOWLObjectPropertyAssertionAxiom(factory.getOWLObjectProperty(KUPVocabulary.HAS_DISEASE.getIRI()),
                                 experimentFactor, factory.getOWLNamedIndividual(entity.getIRI()));
@@ -364,7 +366,7 @@ public class OntologyBuilder {
                         axioms.add(tmpAx);
                     }
                     else {
-                        if (!disease.equals("")) {
+                        if (!StringUtils.isEmpty(disease)) {
                             System.err.println("Something went wrong creating: " + disease);
                             System.exit(0);
                         }

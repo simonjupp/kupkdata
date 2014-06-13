@@ -21,6 +21,7 @@ package kupkb_experiments;/*
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
@@ -214,18 +215,23 @@ public class ExperimentSpreadSheetParser {
                 }
                 else if (cell.getStringCellValue().toLowerCase().equals(SpreadhseetVocabulary.DISEASE.getKeyName())) {
                     String t = getValueForKey(cell);
-                    String [] diseaseValues = t.split("\\s*\\|\\s*");
-                    Set<String> diseasesSet = new HashSet<String>();
-                    for (String s : diseaseValues) {
-                        s = s.trim();
-                        IRI iri = lookupId(cell, s);
-                        if (iri != null) {
-                            s = iri.toString();
+                    if (!StringUtils.isEmpty(t)) {
+                        String [] diseaseValues = t.split("\\s*\\|\\s*");
+                        Set<String> diseasesSet = new HashSet<String>();
+                        for (String s : diseaseValues) {
+                            s = s.trim();
+                            IRI iri = IRI.create(t);
+
+                            //                        IRI iri = lookupId(cell, s);
+                            if (iri != null) {
+                                s = iri.toString();
+                            }
+                            System.out.println("Setting disease: " + s);
+                            diseasesSet.add(s);
                         }
-                        System.out.println("Setting disease: " + s);
-                        diseasesSet.add(s);
+                        annotation.getHasDisease().addAll(diseasesSet);
                     }
-                    annotation.getHasDisease().addAll(diseasesSet);
+
                 }
                 else if (cell.getStringCellValue().toLowerCase().equals(SpreadhseetVocabulary.BIOMATERIAL.getKeyName())) {
 
@@ -233,8 +239,9 @@ public class ExperimentSpreadSheetParser {
                     String [] values = desc.split("\\s*\\|\\s*");
                     for (String s : values) {
                         s = s.trim();
+                        IRI iri = IRI.create(s);
 
-                        IRI iri = lookupId(cell, s);
+//                        IRI iri = lookupId(cell, s);
                         if (iri != null) {
                             s = iri.toString();
                         }
@@ -288,83 +295,83 @@ public class ExperimentSpreadSheetParser {
 //            if (firstCell != null) {
 //                if (!firstCell.getStringCellValue().equals("")) {
 
-                    for (String key : compoundAttributeToColumn.keySet()) {
+            for (String key : compoundAttributeToColumn.keySet()) {
 
-                        if (key.equals(SpreadhseetVocabulary.GENE_SYMBOL.getKeyName())) {
-                            // get the value in the cell
-                            int col = compoundAttributeToColumn.get(key);
-                            Cell cell = sheet.getRow(r).getCell(col);
-                            if (cell != null) listMember.setGeneSymbol(cell.getStringCellValue());
-                        }
-                        if (key.equals(SpreadhseetVocabulary.GENE_ID.getKeyName()) || key.equals(SpreadhseetVocabulary.ENTREZ_GENE_ID.getKeyName())) {
-                            // get the value in the cell
-                            int col = compoundAttributeToColumn.get(key);
-                            Cell cell = sheet.getRow(r).getCell(col);
-                            if (cell != null) {
+                if (key.equals(SpreadhseetVocabulary.GENE_SYMBOL.getKeyName())) {
+                    // get the value in the cell
+                    int col = compoundAttributeToColumn.get(key);
+                    Cell cell = sheet.getRow(r).getCell(col);
+                    if (cell != null) listMember.setGeneSymbol(cell.getStringCellValue());
+                }
+                if (key.equals(SpreadhseetVocabulary.GENE_ID.getKeyName()) || key.equals(SpreadhseetVocabulary.ENTREZ_GENE_ID.getKeyName())) {
+                    // get the value in the cell
+                    int col = compoundAttributeToColumn.get(key);
+                    Cell cell = sheet.getRow(r).getCell(col);
+                    if (cell != null) {
 
-                                String s = cell.getStringCellValue();
+                        String s = cell.getStringCellValue();
 
-                                if (s.contains("E")) {
-                                    String tmps = s.substring(s.indexOf("E"));
-                                    s = s.replace(tmps, "");
-                                    s = s.replace(".", "");
-                                }
-                                else if (s.endsWith(".0")) {
-                                    s = s.replace(".0", "");
-                                }
-                                listMember.setGeneId(s);
-                            }
+                        if (s.contains("E")) {
+                            String tmps = s.substring(s.indexOf("E"));
+                            s = s.replace(tmps, "");
+                            s = s.replace(".", "");
                         }
-                        if (key.equals(SpreadhseetVocabulary.UNIPROT_ID.getKeyName()) || key.equals(SpreadhseetVocabulary.UNIPROT_ACC.getKeyName())) {
-                            // get the value in the cell
-                            int col = compoundAttributeToColumn.get(key);
-                            Cell cell = sheet.getRow(r).getCell(col);
-                            if (cell != null) listMember.setUniprotID(cell.getStringCellValue());
+                        else if (s.endsWith(".0")) {
+                            s = s.replace(".0", "");
                         }
-                        if (key.equals(SpreadhseetVocabulary.HMDB_ID.getKeyName())) {
-                            // get the value in the cell
-                            int col = compoundAttributeToColumn.get(key);
-                            Cell cell = sheet.getRow(r).getCell(col);
-                            if (cell != null) listMember.setHmdbid(cell.getStringCellValue());
-                        }
-                        if (key.equals(SpreadhseetVocabulary.MICROCOSM.getKeyName())) {
-                            // get the value in the cell
-                            int col = compoundAttributeToColumn.get(key);
-                            Cell cell = sheet.getRow(r).getCell(col);
-                            if (cell != null) listMember.setMicrocosmid(cell.getStringCellValue());
-                        }
-                        if (key.equals(SpreadhseetVocabulary.EXPRESSION_STRENGTH.getKeyName())) {
-                            // get the value in the cell
-                            int col = compoundAttributeToColumn.get(key);
-                            Cell cell = sheet.getRow(r).getCell(col);
-                            if (cell != null) listMember.setExpressionStrength(cell.getStringCellValue());
-                        }
-                        if (key.equals(SpreadhseetVocabulary.DIFFERENTIAL.getKeyName())) {
-                            // get the value in the cell
-                            int col = compoundAttributeToColumn.get(key);
-                            Cell cell = sheet.getRow(r).getCell(col);
-                            if (cell != null) listMember.setDifferential(cell.getStringCellValue());
-                        }
-                        if (key.equals(SpreadhseetVocabulary.RATIO.getKeyName())) {
-                            // get the value in the cell
-                            int col = compoundAttributeToColumn.get(key);
-                            Cell cell = sheet.getRow(r).getCell(col);
-                            if (cell != null) listMember.setRatio(cell.getStringCellValue());
-                        }
-                        if (key.equals(SpreadhseetVocabulary.P_VALUE.getKeyName())) {
-                            // get the value in the cell
-                            int col = compoundAttributeToColumn.get(key);
-                            Cell cell = sheet.getRow(r).getCell(col);
-                            if (cell != null) listMember.setPValue(cell.getStringCellValue());
-                        }
-                        if (key.equals(SpreadhseetVocabulary.FDR.getKeyName())) {
-                            // get the value in the cell
-                            int col = compoundAttributeToColumn.get(key);
-                            Cell cell = sheet.getRow(r).getCell(col);
-                            if (cell != null) listMember.setFdrValue(cell.getStringCellValue());
-                        }
+                        listMember.setGeneId(s);
                     }
-                    comList.getMembers().add(listMember);
+                }
+                if (key.equals(SpreadhseetVocabulary.UNIPROT_ID.getKeyName()) || key.equals(SpreadhseetVocabulary.UNIPROT_ACC.getKeyName())) {
+                    // get the value in the cell
+                    int col = compoundAttributeToColumn.get(key);
+                    Cell cell = sheet.getRow(r).getCell(col);
+                    if (cell != null) listMember.setUniprotID(cell.getStringCellValue());
+                }
+                if (key.equals(SpreadhseetVocabulary.HMDB_ID.getKeyName())) {
+                    // get the value in the cell
+                    int col = compoundAttributeToColumn.get(key);
+                    Cell cell = sheet.getRow(r).getCell(col);
+                    if (cell != null) listMember.setHmdbid(cell.getStringCellValue());
+                }
+                if (key.equals(SpreadhseetVocabulary.MICROCOSM.getKeyName())) {
+                    // get the value in the cell
+                    int col = compoundAttributeToColumn.get(key);
+                    Cell cell = sheet.getRow(r).getCell(col);
+                    if (cell != null) listMember.setMicrocosmid(cell.getStringCellValue());
+                }
+                if (key.equals(SpreadhseetVocabulary.EXPRESSION_STRENGTH.getKeyName())) {
+                    // get the value in the cell
+                    int col = compoundAttributeToColumn.get(key);
+                    Cell cell = sheet.getRow(r).getCell(col);
+                    if (cell != null) listMember.setExpressionStrength(cell.getStringCellValue());
+                }
+                if (key.equals(SpreadhseetVocabulary.DIFFERENTIAL.getKeyName())) {
+                    // get the value in the cell
+                    int col = compoundAttributeToColumn.get(key);
+                    Cell cell = sheet.getRow(r).getCell(col);
+                    if (cell != null) listMember.setDifferential(cell.getStringCellValue());
+                }
+                if (key.equals(SpreadhseetVocabulary.RATIO.getKeyName())) {
+                    // get the value in the cell
+                    int col = compoundAttributeToColumn.get(key);
+                    Cell cell = sheet.getRow(r).getCell(col);
+                    if (cell != null) listMember.setRatio(cell.getStringCellValue());
+                }
+                if (key.equals(SpreadhseetVocabulary.P_VALUE.getKeyName())) {
+                    // get the value in the cell
+                    int col = compoundAttributeToColumn.get(key);
+                    Cell cell = sheet.getRow(r).getCell(col);
+                    if (cell != null) listMember.setPValue(cell.getStringCellValue());
+                }
+                if (key.equals(SpreadhseetVocabulary.FDR.getKeyName())) {
+                    // get the value in the cell
+                    int col = compoundAttributeToColumn.get(key);
+                    Cell cell = sheet.getRow(r).getCell(col);
+                    if (cell != null) listMember.setFdrValue(cell.getStringCellValue());
+                }
+            }
+            comList.getMembers().add(listMember);
 //                }
 //            }
         }
@@ -395,7 +402,7 @@ public class ExperimentSpreadSheetParser {
                 }
             }
         }
-        
+
         return null;
     }
 
@@ -424,7 +431,7 @@ public class ExperimentSpreadSheetParser {
 //        System.err.println(cell.getStringCellValue() + " col" + colIndex + " row " + rowIndex);
         Cell nextCell = sheet.getRow(rowIndex).getCell(colIndex + 1);
 
-        
+
 
         if (nextCell != null) {
             return nextCell.getStringCellValue();

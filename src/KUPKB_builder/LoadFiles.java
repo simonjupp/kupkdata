@@ -79,7 +79,7 @@ public class LoadFiles {
                 repositoryNode = st.getSubject();
             }
 
-            repositoryManager = new LocalRepositoryManager(new File("./kupkbdb"));
+            repositoryManager = new LocalRepositoryManager(new File("./cvdkb"));
 
             repositoryManager.initialize();
 

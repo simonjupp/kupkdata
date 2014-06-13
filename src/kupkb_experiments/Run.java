@@ -53,7 +53,7 @@ public class Run {
 //            ob.loadOntology(IRI.create(KUPNamespaces.KUPKB_IRI.toString()));
 //            ob.loadOntology(IRI.create(KUPNamespaces.MAO.toString()));
 //            ob.loadOntology(IRI.create(KUPNamespaces.CTO.toString()));
-            ob.loadOntology(IRI.create("file:/Users/jupp/dev/ontology_dev/kupo/kupkb/kupkb-merged.owl"));
+            ob.loadOntology(IRI.create("file:/Users/jupp/dev/ontology_dev/kupkb/ontologies/kupkb/kupkb-merged.owl"));
             ob.initialise();
         } catch (OWLOntologyCreationException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -61,7 +61,8 @@ public class Run {
         OWLOntology onto = ob.generateOWL(exp);
         OWLOntologyManager man = ob.getOWLManager();
         try {
-            man.saveOntology(onto, new RDFXMLOntologyFormat(), IRI.create(args[1]));
+            File f = new File (args[1]);
+            man.saveOntology(onto, new RDFXMLOntologyFormat(), IRI.create(f.toURI()));
         } catch (OWLOntologyStorageException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }

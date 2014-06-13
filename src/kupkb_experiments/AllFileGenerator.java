@@ -49,7 +49,7 @@ public class AllFileGenerator {
 //            ob.loadOntology(IRI.create(KUPNamespaces.MAO.toString()));
 //            ob.loadOntology(IRI.create(KUPNamespaces.CTO.toString()));
 // always leave out            ob.loadOntology(IRI.create(KUPNamespaces.PATO.toString()));
-            ob.loadOntology(IRI.create("file:/Users/jupp/dev/ontology_dev/kupo/kupkb/kupkb-merged.owl"));
+            ob.loadOntology(IRI.create("file:/Users/jupp/dev/ontology_dev/kupkb/ontologies/kupkb/kupkb-merged.owl"));
 
         } catch (OWLOntologyCreationException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -89,7 +89,8 @@ public class AllFileGenerator {
                      OWLOntology onto = ob.generateOWL(exp);
                      OWLOntologyManager man = ob.getOWLManager();
                      try {
-                         man.saveOntology(onto, new RDFXMLOntologyFormat(), IRI.create("file:/tmp/experiment_ontologies/" + ontologyname));
+                         File outFile = new File("/Users/jupp/Google Drive/JuppKlein/CVDKB/rdf/" + ontologyname);
+                         man.saveOntology(onto, new RDFXMLOntologyFormat(), IRI.create(outFile.toURI()));
                          ob.getOWLManager().removeOntology(onto);
                      } catch (OWLOntologyStorageException e) {
                          e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -109,7 +110,7 @@ public class AllFileGenerator {
 
     public static void main(String[] args) {
 
-        String path = "/Users/jupp/Google Drive/JuppKlein/KUP/datasets";
+        String path = "/Users/jupp/Google Drive/JuppKlein/CVDKB/Datasets";
 
         AllFileGenerator all = new AllFileGenerator();
         all.walk(path);

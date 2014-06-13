@@ -21,7 +21,6 @@ package Ontogrator_kupkb;/*
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-import com.clarkparsia.pellet.owlapiv3.PelletReasonerFactory;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -368,7 +367,7 @@ public class OWLNestedSetGenerator {
 
         OWLOntologyManager man = OWLManager.createOWLOntologyManager();
 
-        PelletReasonerFactory fact = new PelletReasonerFactory();
+//        PelletReasonerFactory fact = new PelletReasonerFactory();
         
 //        try {
 //            man.setSilentMissingImportsHandling(true);
@@ -473,8 +472,8 @@ public class OWLNestedSetGenerator {
 //        }
 
         // loading kupkb_experiments.test data
-        OWLNestedSetGenerator ns = new OWLNestedSetGenerator(man, fact, 0);
-        ns.loadData("/Users/simon/dev/java/projects/kupdata/ontogrator_testingdata_small.xls");
+//        OWLNestedSetGenerator ns = new OWLNestedSetGenerator(man, fact, 0);
+//        ns.loadData("/Users/simon/dev/java/projects/kupdata/ontogrator_testingdata_small.xls");
 
 
     }

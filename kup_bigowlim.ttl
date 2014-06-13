@@ -8,12 +8,13 @@
 @prefix owlim: <http://www.ontotext.com/trree/owlim#>.
 
 [] a rep:Repository ;
-   rep:repositoryID "kupkb-010913" ;
-   rdfs:label "kupkb-010913-owlim.3.5" ;
+   rep:repositoryID "cvdkb-130614" ;
+   rdfs:label "cvdkb-130614-owlim.3.5" ;
    rep:repositoryImpl [
      rep:repositoryType "openrdf:SailRepository" ;
      sr:sailImpl [
-       owlim:ruleset "./HorstRules_kupkb.pie" ;
+      # owlim:ruleset "./HorstRules_kupkb.pie" ;
+       owlim:ruleset "empty" ;
        owlim:entity-index-size "10000000" ;
        owlim:cache-memory "300m" ;
        owlim:tuple-index-memory "200m" ;
