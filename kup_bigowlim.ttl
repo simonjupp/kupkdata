@@ -8,8 +8,8 @@
 @prefix owlim: <http://www.ontotext.com/trree/owlim#>.
 
 [] a rep:Repository ;
-   rep:repositoryID "cvdkb-130614" ;
-   rdfs:label "cvdkb-130614-owlim.3.5" ;
+   rep:repositoryID "cvdkb-080115" ;
+   rdfs:label "cvdkb-080115-owlim.3.5" ;
    rep:repositoryImpl [
      rep:repositoryType "openrdf:SailRepository" ;
      sr:sailImpl [
